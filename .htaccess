@@ -1,0 +1,22 @@
+# CONFIGURAR UTILIZAÇÃO DO HTTPS
+RewriteEngine On
+RewriteCond %{SERVER_PORT} 80
+RewriteRule ^(.*)$ https://midoricapital.com.br/$1 [R,L]
+
+
+# Impedir o acesso direto a arquivos específicos
+<Files "process.php">
+    Order deny,allow
+    Deny from all
+</Files>
+
+# Impedir o acesso a uma pasta específica
+<Directory "app">
+    Order deny,allow
+    Deny from all
+</Directory>
+
+<Directory "vendor">
+    Order deny,allow
+    Deny from all
+</Directory>

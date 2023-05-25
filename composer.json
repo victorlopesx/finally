@@ -1,0 +1,21 @@
+{
+  "name": "brk/midoricapital",
+  "description": "PHP Api for precessing payments via PIX",
+  "license": "private",
+  "autoload": {
+    "psr-4": {
+      "App\\": "app/"
+    }
+  },
+  "authors": [
+    {
+      "name": "Victor Augusto Lopes",
+      "email": "victor@midoricapital.com"
+    }
+  ],
+  "minimum-stability": "stable",
+  "require": {
+    "mpdf/qrcode": "^1.2",
+    "phpmailer/phpmailer": "^6.8"
+  }
+}
